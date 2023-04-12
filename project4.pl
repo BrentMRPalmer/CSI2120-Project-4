@@ -17,9 +17,9 @@ read_xyz_file(File, Points) :-
 read_xyz_points(Stream, []) :-
     at_end_of_stream(Stream).
 read_xyz_points(Stream, [Point|Points]) :-
-    + at_end_of_stream(Stream),
+    \+ at_end_of_stream(Stream),
     read_line_to_string(Stream,L), 
-    split_string(L, "\\t", "\\s\\t\\n",XYZ), 
+    split_string(L, "\t", "\s\t\n",XYZ), 
     convert_to_float(XYZ,Point),
     read_xyz_points(Stream, Points).
 
