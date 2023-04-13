@@ -67,10 +67,6 @@ test_random3points(random3points, 5) :-
     read_xyz_file('Point_Cloud_3_No_Road_Reduced.xyz', Points),
     random3points(Points, [[-5.109676532, 1.373065286, 1.395952407], [9.30627106, 8.393431137, 1.485946777], [22.56290577, -6.061965032, 3.220697665]]).
 
-test_random(1) :-
-    read_xyz_file("Point_Cloud_1_No_Road_Reduced.xyz", Points), !,
-    random3points(Points, [[-8.046729584, -3.533906014, -0.160462586], [-9.661731452, 14.1433922, 1.723840689], [-6.835859492, 15.02108731, 1.956810477]]).
-
 % used to run random3points using Point_Cloud_1_No_Road_Reduced.xyz
 run_random3points(Point3) :-
     read_xyz_file('Point_Cloud_1_No_Road_Reduced.xyz', Points),
